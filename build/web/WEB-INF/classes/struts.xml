@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+   <package name="technosoft" namespace="/" extends="struts-default">
+
+        <action name="loadhomepage">
+            <result>home.jsp</result>
+        </action>
+        <action name="homeurl">
+            <result>home.jsp</result>
+        </action>
+        <action name="abouturl"> 
+            <result>about.jsp</result>
+        </action>
+        <action name="servicesurl">
+            <result>services.jsp</result>
+        </action>
+        <action name="processurl">
+            <result>process.jsp</result>
+        </action>
+        <action name="signupurl">
+            <result>signup.jsp</result>
+        </action>
+        <action name="signinurl">
+            <result>signin.jsp</result>
+        </action>
+        
+        <action name="contacturl">
+            <result>contact.jsp</result>
+        </action>
+        
+        <action name="requesturl">
+            <result>request.jsp</result>
+        </action>
+        
+        <action name="complainurl">
+            <result>complain.jsp</result>  
+        </action>
+        
+        <action name="feedbackurl">
+            <result>feedback.jsp</result>  
+        </action>
+        
+        <action name="settingurl">
+            <result>customersetting.jsp</result>
+        </action> 
+        
+        <action name="customerSettingaction_logicalcode_action"   class="struts.hibernate.action.AdminSigninAction">
+            <result  name="success">login.jsp</result>
+            <result  name="error">customersetting.jsp</result>
+        </action>
+        
+        
+        <action name="requestaction_logicalcode_action"  class="struts.hibernate.action.RequestAction">
+            <result name="success">request.jsp</result>
+        </action>
+        
+        <action name="Complainaction_logicalcode_action"  class="struts.hibernate.action.ComplainAction">
+            <result name="success">CustomerDashboard.jsp</result>
+            <result name="error">complain.jsp</result>            
+        </action>
+        
+        <action name="feedbackaction_logicalcode_action"  class="struts.hibernate.action.FeedBackAction">
+            <result name="success">feedback.jsp</result>
+        </action>
+        
+        
+        <action name="signupaction_logicalcode_action"  class="struts.hibernate.action.CustomerAction">
+           <result name="success">signin.jsp</result>  
+           <result name="input">signup.jsp</result>      
+        </action>
+        
+        
+        <action name="signinaction_logicalcode_action"  class="struts.hibernate.action.SigninAction">
+            <result name="success">CustomerDashboard.jsp</result>
+            <result name="error">signin.jsp</result>            
+        </action>
+     
+     
+     
+     
+     
+                             <!--authorized person section-->
+        
+        
+        
+        
+        <action name="adminsigninurl">
+            <result>adminsignin.jsp</result>
+        </action>
+        
+        <action name="logouturl">
+            <result>adminsignin.jsp</result>
+        </action>
+        
+       <action name="adminsigninaction_logicalcode_action"  class="struts.hibernate.action.AdminSigninAction">
+        <result name="success">admindashboard.jsp</result>
+        <result name="error">adminsignin.jsp</result>     
+       </action>
+        
+        <action name="adminsettingurl">
+        <result>adminsetting.jsp</result>
+        </action>
+        
+        <action name="adminsettingaction_logicalcode_action"   class="struts.hibernate.action.AdminSigninAction" method="passwordLogic">
+        <result  name="success">adminsignin.jsp</result>
+        <result  name="error">adminsetting.jsp</result>
+        </action>
+        
+       <action name="viewrequesturl">
+            <result>viewrequest.jsp</result>
+        </action>
+        
+        <action name="viewrecomplain">
+            <result>viewcomplain.jsp</result>
+        </action>
+        
+        
+        
+
+    </package>
+
+</struts> 
+

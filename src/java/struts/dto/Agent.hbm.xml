@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.00//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="bid.beans">
+<class name="Customer" table="customer">
+ <id name="cId" column="customerid"/>
+ <property name="cName" column="fullNname"/>
+ <property name="cont" column="contact"/>
+ <property name="dob" column="dateofbirth"/>
+ <property name="pass" column="password"/>
+ <property name="city" column="city"/>
+</class>
+</hibernate-mapping>

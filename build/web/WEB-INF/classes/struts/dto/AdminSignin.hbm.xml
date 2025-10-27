@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.00//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="struts.dto">
+<class name="AdminSignin" table="Admin">
+ <id name="adminId" column="AdminId"/>
+ <property name="adminPassword" column="Password"/>
+</class>
+</hibernate-mapping>
